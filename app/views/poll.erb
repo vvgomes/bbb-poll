@@ -1,0 +1,12 @@
+<form action="/poll" method="post">
+  <input type="hidden" name="_method" value="put" />
+  <div>
+    <p>
+      <input type="radio" name="voted" value="<%= 1 %>" /> Gilda
+    </p>
+    <p>
+      <input type="radio" name="voted" value="<%= 2 %>" /> Jairo
+    </p>
+  </div>
+  <input type="submit" class="btn btn-primary" value="Envie seu voto agora" />
+</form>

@@ -1,0 +1,14 @@
+todo:
+mvp:
+- images as radios
+- selection
+- button div
+- binary images
+- redis storage
+- assets
+
+performant:
+- single page
+- vote via ajax
+- change the page via js/css
+- serve pure html

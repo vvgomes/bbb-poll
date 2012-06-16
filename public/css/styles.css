@@ -120,10 +120,9 @@ p.small {
   background-position: -340px -150px;
 }
 
-.radio {
-  width: 40px;
-  height: 50px;
+#success-message p {
+  margin: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #424242;
 }
-/*
-  flash: #424242;
-*/

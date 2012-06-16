@@ -21,8 +21,6 @@ put '/poll' do
   name = 'Silvia' if voted == '1'
   name = 'Marcos' if voted == '2'
 
-  puts ">>>>> GOT HERE!!! AND THE NAME IS #{name}"
-
   flash[:name] = name
   redirect to '/score'
 end

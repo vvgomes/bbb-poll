@@ -4,7 +4,7 @@ body {
 }
 
 #container {
-  width: 600px;
+  width: 650px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
@@ -20,6 +20,7 @@ body {
 header {
   text-align: center;
   padding: 20px;
+  padding-top: 10px;
 }
 
 header h2 {
@@ -28,6 +29,17 @@ header h2 {
 
 header h2 span {
   vertical-align: text-top;
+}
+
+.logo {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: text-top;
+  background-image: url("../img/sprite.png");
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
 }
 
 .slim {
@@ -43,9 +55,67 @@ header h2 span {
   width: 100%;
 }
 
-/* 
-  orange thingy: #FF9516
-  light gray: #C6C6C6;
-  lighter gray: #F5F5F5;
+form {
+  margin: 0px;
+}
+
+p.small {
+  font-size: small;
+}
+
+#vote {
+  text-align: center;
+  background-color: #F5F5F5;
+  border-top: solid 1px #BABABA;
+  padding: 20px;
+  clear: both;
+}
+
+#vote input[type="submit"] {
+  border-radius: 2px;
+  width: 200px;
+  height: 40px;
+  font-size: 14px;
+}
+
+#candidates {
+  margin: 0px;
+}
+
+#candidates li {
+  list-style-type: none;
+  float: left;
+  width: 282px;
+  margin: 20px;
+}
+
+.candidate-name {
+  font-size: 18px;
+}
+
+.avatar {
+  width: 280px;
+  height: 290px;
+  vertical-align: text-top;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  border: solid 1px #BABABA;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.girl {
+  background-position: -10px -150px;
+}
+
+.boy {
+  background-position: -340px -150px;
+}
+
+.radio {
+  width: 40px;
+  height: 50px;
+}
+/*
   flash: #424242;
 */

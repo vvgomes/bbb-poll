@@ -1,12 +1,26 @@
+<div>
 <form action="/poll" method="post">
   <input type="hidden" name="_method" value="put" />
-  <div>
-    <p>
-      <input type="radio" name="voted" value="<%= 1 %>" /> Gilda
-    </p>
-    <p>
-      <input type="radio" name="voted" value="<%= 2 %>" /> Jairo
-    </p>
+  <ul id="candidates">
+    <li>
+      <h3><strong>Silvia</strong></h3>
+      <div class="avatar girl"></div>
+      <p class="small">
+        Para eliminar a <strong>Silvia</strong> pelo telefone disque 
+        <strong>0800-123-001</strong> ou mande um SMS para <strong>8001</strong>
+      </p>
+    </li>
+    <li>
+      <h3><strong>Marcos</strong></h3>
+      <div class="avatar boy"></div>
+      <p class="small">
+        Para eliminar a <strong>Marcos</strong> pelo telefone disque 
+        <strong>0800-123-002</strong> ou mande um SMS para <strong>8002</strong>
+      </p>
+    </li>
+  </ul>
+  <div id="vote">
+    <input type="submit" class="btn btn-primary" value="Envie seu voto agora" />
   </div>
-  <input type="submit" class="btn btn-primary" value="Envie seu voto agora" />
 </form>
+</div>

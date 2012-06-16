@@ -1,11 +1,14 @@
 todo:
 mvp:
+- make the logo dom
 - images as radios
 - selection
 - button div
 - binary images
 - redis storage
 - assets
+- timer
+- score
 
 performant:
 - single page

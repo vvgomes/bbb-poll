@@ -18,8 +18,8 @@ end
 
 put '/poll' do
   voted = params[:voted]
-  name = 'Gilda' if voted == '1'
-  name = 'Jairo' if voted == '2'
+  name = 'Silvia' if voted == '1'
+  name = 'Marcos' if voted == '2'
 
   flash[:name] = name
   redirect to '/score'

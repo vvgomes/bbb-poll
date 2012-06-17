@@ -1,7 +1,5 @@
 todo:
 mvp:
-- images as radios
-- selection
 - redis storage
 - timer
 - score

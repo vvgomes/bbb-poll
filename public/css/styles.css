@@ -3,9 +3,12 @@ body {
   color: #545454;
 }
 
-body, h2, h3 {
+body, h2, h3, span {
   font-family: Sans-Serif;
   font-weight: lighter;
+}
+
+h2, h3 {
   margin: 10px;
 }
 
@@ -29,11 +32,17 @@ header {
   padding-top: 10px;
 }
 
-header h2 span {
-  vertical-align: text-top;
+#headline {
+  padding: 0px 90px 0px 90px;
+  margin-bottom: 20px;
+}
+
+#headline h2 {
+  padding-top: 6px;
 }
 
 .logo {
+  float: left;
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -42,6 +51,10 @@ header h2 span {
   background-image: url("../img/sprite.png");
   background-position: 0px 0px;
   background-repeat: no-repeat;
+}
+
+.hr {
+  clear: both;
 }
 
 .hr div {

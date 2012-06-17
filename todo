@@ -1,8 +1,8 @@
 todo:
 mvp:
-- redis storage
+- chart
 - timer
-- score
+- redis storage
 
 performant:
 - binary images

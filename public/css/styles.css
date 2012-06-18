@@ -175,7 +175,7 @@ canvas#chart {
   left: 180px;
 }
 
-#timer {
+#countdown {
   width: 180px;
   height: 180px;
   background-color: 
@@ -190,14 +190,14 @@ canvas#chart {
   padding-top: 45px;
 }
 
-#timer p {
+#countdown p {
   text-align: center;
   color: #C6C6C6;
   font-size: 11px;
   margin: 2px;
 }
 
-p#countdown {
+p#clock {
   color: #FF9516;
   font-size: 32px;
 }

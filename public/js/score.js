@@ -1,3 +1,19 @@
+function createPlotData(votes) {
+  var colors = ['#FF9516','#C6C6C6'];
+  
+  var total = votes.reduce(function(s, e) { 
+    return parseInt(s) + parseInt(e); 
+  });
+
+  return $(votes).map(function(i, v) {
+    return {
+      degrees: Math.floor((v * 360) / total),
+      percentage: Math.round((v * 100) / total).toString()+'%',
+      color: colors[i]
+    };
+  });
+}
+
 function createPointer(clockwise) {
   var pointer = {};
   var degrees = 90;
@@ -23,36 +39,24 @@ function createPointer(clockwise) {
   return pointer;
 }
 
-function createPlotData(votes) {
-  var colors = ['#FF9516','#C6C6C6'];
-  
-  var total = votes.reduce(function(s, e) { 
-    return parseInt(s) + parseInt(e); 
-  });
-
-  return $(votes).map(function(i, v) {
-    return {
-      degrees: Math.floor((v * 360) / total),
-      percentage: Math.round((v * 100) / total).toString()+'%',
-      color: colors[i]
-    };
-  });
-}
-
-createChart = function(canvas) {
+createChart = function(dom) {
   var chart = {};
+  var canvas = dom.canvas();
   var context = canvas.getContext('2d');      
   
   var center = {
     x: Math.floor(canvas.width / 2),
     y: Math.floor(canvas.height / 2)
   };
-  
+
   var radius = center.x;
 
-  chart.draw = function(votes) {
+  chart.draw = function() {
+    var votes = $(dom.votes()).map(function(i, e){ 
+      return e.val(); 
+    });
+    
     var data = createPlotData(votes);
-
     var pointer = createPointer(true);
     var labelPointers = [createPointer(true), createPointer(false)];
 
@@ -111,11 +115,65 @@ createChart = function(canvas) {
   return chart;
 }
 
-$(document).ready(function(){
-  var votes = [
-    $('#first-candidate-votes').val(), 
-    $('#second-candidate-votes').val()
-  ];
+var chartDom = {
+  canvas: function() { 
+    return $('canvas')[0]; 
+  },
+  votes: function() { 
+    return [
+      $('#first-candidate-votes'), 
+      $('#second-candidate-votes')
+    ];
+  }  
+}
 
-  createChart($('canvas')[0]).draw(votes);
+function createClock(milleseconds) {
+  var clock = {};
+  var deadline = Math.floor(milleseconds / 1000);
+  var left = deadline - (Date.parse(now()) / 1000);
+
+  clock.toString = function() {
+    var hours = Math.floor(left / 3600);
+    var min = Math.floor((left - (hours * 3600)) / 60);
+    var sec = Math.floor((left - (hours * 3600) - (min * 60)));
+
+    hours = (hours < 10) ? ('0' + hours) : hours.toString();
+    min = (min < 10) ? ('0' + min) : min.toString();
+    sec = (sec < 10) ? ('0' + sec) : sec.toString();
+    
+    return hours + ':' + min + ':' + sec;
+  };
+
+  clock.decrease = function() {
+    return --left;
+  };
+
+  return clock;
+}
+
+function now() {
+  return new Date();
+}
+
+function createCountdown(dom) {
+  var deadline = dom.deadline().val();
+  var clock = createClock(deadline);
+
+  function update() {
+    clock.decrease();
+    dom.clock().html(clock.toString());
+  }
+
+  setInterval(update, 1000);
+}
+
+var countdownDom = {
+  clock: function() { return $('#clock'); },
+  wrapper: function() { return $('#countdown-wrapper'); },
+  deadline: function() { return $('#deadline'); }
+};
+
+$(document).ready(function(){
+  createChart(chartDom).draw();
+  createCountdown(countdownDom);
 });

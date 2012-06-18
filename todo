@@ -1,7 +1,8 @@
 todo:
 mvp:
-- timer
+- timer *
 - redis storage
+- remove request specs
 
 performant:
 - binary images

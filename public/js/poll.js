@@ -7,13 +7,11 @@ function createCandidateSelector(dom) {
   });
 }
 
-function createDom() {
-  return {
-    avatars: function(){ return $('.avatars'); },
-    selected: function(){ return $('input[name="selected"]'); }
-  };
-}
+var dom = {
+  avatars: function(){ return $('.avatar'); },
+  selected: function(){ return $('input[name="selected"]'); }
+};
 
 $(document).ready(function(){
-  createCandidateSelector(createDom());
+  createCandidateSelector(dom);
 });

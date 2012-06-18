@@ -59,3 +59,31 @@ describe('chart', function() {
     });    
   });
 });
+
+describe('countdown', function() {
+  describe('clock', function() {
+    var clock;
+
+    beforeEach(function() {
+      now = function() {
+        var d = new Date();
+        d.setTime(1340027088000);
+        return d;
+      };
+      clock = createClock(1340030688000);
+    });
+
+    it('should display time nicely', function() {
+      expect(clock.toString()).toBe('01:00:00');
+    });
+
+    it('should decrease a second', function() {
+      clock.decrease();
+      expect(clock.toString()).toBe('00:59:59');
+    });
+
+    it('should give me the time left after decreasing', function() {
+      expect(clock.decrease()).toBe(3599);
+    });
+  });  
+});

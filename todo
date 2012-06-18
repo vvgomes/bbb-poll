@@ -1,6 +1,5 @@
 todo:
 mvp:
-- chart
 - timer
 - redis storage
 

@@ -167,21 +167,9 @@ p.small {
   background-position-x: -320px;
 }
 
-/*#chart {
-  width: 270px;
-  height: 270px;
-  background-color: #C6C6C6;
-  border: solid 2px white;
-  border-radius: 150px;
-  position: absolute;
-  bottom: -60px;
-  left: 180px;
-}*/
-
 canvas#chart {
   width: 270px;
   height: 270px;
-  /*border: solid 2px white;*/
   position: absolute;
   bottom: -60px;
   left: 180px;

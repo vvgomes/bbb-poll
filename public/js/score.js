@@ -145,7 +145,11 @@ function createClock(milleseconds) {
   };
 
   clock.decrease = function() {
-    return --left;
+    --left;
+  };
+
+  clock.expired = function() {
+    return !(left > 0);
   };
 
   return clock;
@@ -155,16 +159,26 @@ function now() {
   return new Date();
 }
 
-function createCountdown(dom) {
-  var deadline = dom.deadline().val();
-  var clock = createClock(deadline);
+function createCountdown(clock, dom) {
+  var loop = setInterval(function() {
+    clock.decrease();
+    check();
+  }, 1000);
+
+  check();
+
+  function check() {
+    clock.expired() ? stop() : update();
+  }
 
   function update() {
-    clock.decrease();
     dom.clock().html(clock.toString());
   }
 
-  setInterval(update, 1000);
+  function stop() {
+    dom.wrapper().html('<p id="expired">VOTAÇÃO ENCERRADA</p>');
+    clearInterval(loop);
+  }
 }
 
 var countdownDom = {
@@ -175,5 +189,7 @@ var countdownDom = {
 
 $(document).ready(function(){
   createChart(chartDom).draw();
-  createCountdown(countdownDom);
+
+  var clock = createClock(countdownDom.deadline().val()); 
+  createCountdown(clock, countdownDom);
 });

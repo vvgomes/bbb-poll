@@ -201,3 +201,9 @@ p#clock {
   color: #FF9516;
   font-size: 32px;
 }
+
+p#expired {
+  color: #545454;
+  font-size: 24px;
+  padding-top: 10px;
+}

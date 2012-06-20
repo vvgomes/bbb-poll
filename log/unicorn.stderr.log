@@ -1650,3 +1650,46 @@ I, [2012-06-20T17:35:17.289911 #75381]  INFO -- : reaped #<Process::Status: pid 
 I, [2012-06-20T17:35:17.289952 #75381]  INFO -- : reaped #<Process::Status: pid 75384 exit 0> worker=1
 I, [2012-06-20T17:35:17.289994 #75381]  INFO -- : reaped #<Process::Status: pid 75383 exit 0> worker=0
 I, [2012-06-20T17:35:17.683281 #75381]  INFO -- : master complete
+I, [2012-06-20T17:49:46.025588 #76088]  INFO -- : listening on addr=0.0.0.0:8080 fd=9
+I, [2012-06-20T17:49:46.025813 #76088]  INFO -- : worker=0 spawning...
+I, [2012-06-20T17:49:46.026620 #76088]  INFO -- : worker=1 spawning...
+I, [2012-06-20T17:49:46.027086 #76088]  INFO -- : worker=2 spawning...
+I, [2012-06-20T17:49:46.027639 #76088]  INFO -- : worker=3 spawning...
+I, [2012-06-20T17:49:46.027737 #76092]  INFO -- : worker=0 spawned pid=76092
+I, [2012-06-20T17:49:46.028290 #76092]  INFO -- : Refreshing Gem list
+I, [2012-06-20T17:49:46.028242 #76093]  INFO -- : worker=1 spawned pid=76093
+I, [2012-06-20T17:49:46.028721 #76093]  INFO -- : Refreshing Gem list
+I, [2012-06-20T17:49:46.028797 #76094]  INFO -- : worker=2 spawned pid=76094
+I, [2012-06-20T17:49:46.029265 #76094]  INFO -- : Refreshing Gem list
+I, [2012-06-20T17:49:46.037010 #76088]  INFO -- : worker=4 spawning...
+I, [2012-06-20T17:49:46.039188 #76095]  INFO -- : worker=3 spawned pid=76095
+I, [2012-06-20T17:49:46.039779 #76095]  INFO -- : Refreshing Gem list
+I, [2012-06-20T17:49:46.042321 #76088]  INFO -- : worker=5 spawning...
+I, [2012-06-20T17:49:46.044215 #76096]  INFO -- : worker=4 spawned pid=76096
+I, [2012-06-20T17:49:46.045105 #76096]  INFO -- : Refreshing Gem list
+I, [2012-06-20T17:49:46.057370 #76088]  INFO -- : worker=6 spawning...
+I, [2012-06-20T17:49:46.059304 #76097]  INFO -- : worker=5 spawned pid=76097
+I, [2012-06-20T17:49:46.059962 #76097]  INFO -- : Refreshing Gem list
+I, [2012-06-20T17:49:46.068796 #76088]  INFO -- : worker=7 spawning...
+I, [2012-06-20T17:49:46.070836 #76098]  INFO -- : worker=6 spawned pid=76098
+I, [2012-06-20T17:49:46.071526 #76098]  INFO -- : Refreshing Gem list
+I, [2012-06-20T17:49:46.101752 #76088]  INFO -- : master process ready
+I, [2012-06-20T17:49:46.108755 #76099]  INFO -- : worker=7 spawned pid=76099
+I, [2012-06-20T17:49:46.109353 #76099]  INFO -- : Refreshing Gem list
+I, [2012-06-20T17:49:46.513397 #76095]  INFO -- : worker=3 ready
+I, [2012-06-20T17:49:46.514064 #76093]  INFO -- : worker=1 ready
+I, [2012-06-20T17:49:46.515762 #76094]  INFO -- : worker=2 ready
+I, [2012-06-20T17:49:46.537181 #76092]  INFO -- : worker=0 ready
+I, [2012-06-20T17:49:46.539556 #76098]  INFO -- : worker=6 ready
+I, [2012-06-20T17:49:46.541364 #76096]  INFO -- : worker=4 ready
+I, [2012-06-20T17:49:46.552974 #76097]  INFO -- : worker=5 ready
+I, [2012-06-20T17:49:46.555024 #76099]  INFO -- : worker=7 ready
+I, [2012-06-20T17:49:49.066009 #76088]  INFO -- : reaped #<Process::Status: pid 76099 exit 0> worker=7
+I, [2012-06-20T17:49:49.066791 #76088]  INFO -- : reaped #<Process::Status: pid 76098 exit 0> worker=6
+I, [2012-06-20T17:49:49.066839 #76088]  INFO -- : reaped #<Process::Status: pid 76097 exit 0> worker=5
+I, [2012-06-20T17:49:49.066898 #76088]  INFO -- : reaped #<Process::Status: pid 76096 exit 0> worker=4
+I, [2012-06-20T17:49:49.066946 #76088]  INFO -- : reaped #<Process::Status: pid 76095 exit 0> worker=3
+I, [2012-06-20T17:49:49.066992 #76088]  INFO -- : reaped #<Process::Status: pid 76094 exit 0> worker=2
+I, [2012-06-20T17:49:49.067045 #76088]  INFO -- : reaped #<Process::Status: pid 76093 exit 0> worker=1
+I, [2012-06-20T17:49:49.067108 #76088]  INFO -- : reaped #<Process::Status: pid 76092 exit 0> worker=0
+I, [2012-06-20T17:49:49.067247 #76088]  INFO -- : master complete

@@ -7,9 +7,9 @@ unless ENV['RACK_ENV'] == 'production'
 
   task :default => :spec
 
-  n = namespace :spec do
-    RSpec::Core::RakeTask.new(:models) do |spec|
-      spec.pattern = 'spec/models/**/*_spec.rb'
+  spec = namespace :spec do
+    RSpec::Core::RakeTask.new(:models) do |s|
+      s.pattern = 'spec/models/**/*_spec.rb'
     end
     
     task :javascripts => [:load_jasmine] do
@@ -25,9 +25,11 @@ unless ENV['RACK_ENV'] == 'production'
     end
   end
   
-  task :spec => [n[:models], n[:javascripts]]
+  task :spec => [spec[:models], spec[:javascripts]]
 end
 
-task :server do
-  system 'rackup'
+db = namespace :db do
+  task :seed do
+    ruby './db/seeds.rb'
+  end
 end

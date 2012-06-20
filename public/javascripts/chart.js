@@ -6,9 +6,13 @@ function createPlotData(votes) {
   });
 
   return $(votes).map(function(i, v) {
+    var percentage = ((total > 0) ? Math.round((v * 100) / total) : 50).toString()+'%';
+    var degrees = (total > 0) ? Math.floor((v * 360) / total) : 180;
+    (degrees < 80) && (degrees = 80);
+    (degrees > 280) && (degrees = 280);
     return {
-      degrees: Math.floor((v * 360) / total),
-      percentage: Math.round((v * 100) / total).toString()+'%',
+      degrees: degrees,
+      percentage: percentage,
       color: colors[i]
     };
   });
@@ -121,75 +125,8 @@ var chartDom = {
   },
   votes: function() { 
     return [
-      $('#first-candidate-votes'), 
-      $('#second-candidate-votes')
+      $('#candidate-0-votes'), 
+      $('#candidate-1-votes')
     ];
   }  
 }
-
-function createClock(milleseconds) {
-  var clock = {};
-  var deadline = Math.floor(milleseconds / 1000);
-  var left = deadline - (Date.parse(now()) / 1000);
-
-  clock.toString = function() {
-    var hours = Math.floor(left / 3600);
-    var min = Math.floor((left - (hours * 3600)) / 60);
-    var sec = Math.floor((left - (hours * 3600) - (min * 60)));
-
-    hours = (hours < 10) ? ('0' + hours) : hours.toString();
-    min = (min < 10) ? ('0' + min) : min.toString();
-    sec = (sec < 10) ? ('0' + sec) : sec.toString();
-    
-    return hours + ':' + min + ':' + sec;
-  };
-
-  clock.decrease = function() {
-    --left;
-  };
-
-  clock.expired = function() {
-    return !(left > 0);
-  };
-
-  return clock;
-}
-
-function now() {
-  return new Date();
-}
-
-function createCountdown(clock, dom) {
-  var loop = setInterval(function() {
-    clock.decrease();
-    check();
-  }, 1000);
-
-  check();
-
-  function check() {
-    clock.expired() ? stop() : update();
-  }
-
-  function update() {
-    dom.clock().html(clock.toString());
-  }
-
-  function stop() {
-    dom.wrapper().html('<p id="expired">VOTAÇÃO ENCERRADA</p>');
-    clearInterval(loop);
-  }
-}
-
-var countdownDom = {
-  clock: function() { return $('#clock'); },
-  wrapper: function() { return $('#countdown-wrapper'); },
-  deadline: function() { return $('#deadline'); }
-};
-
-$(document).ready(function(){
-  createChart(chartDom).draw();
-
-  var clock = createClock(countdownDom.deadline().val()); 
-  createCountdown(clock, countdownDom);
-});

@@ -1,34 +1,26 @@
-<form action="/poll" method="post">
+<form action="/" method="post">
   <input type="hidden" name="_method" value="put" />
-  <input type="hidden" name="selected" value="" />
+  <input type="hidden" name="selected_id" value="" />
   <ul id="candidates">
-    <li>
-      <h3>
-        <strong>Silvia</strong>
-      </h3>
-      <div class="avatar first-candidate selectable">
-        <div data-id="1"></div>
-      </div>
-      <p class="small">
-        Para eliminar a <strong>Silvia</strong> pelo telefone disque 
-        <strong>0800-123-001</strong> ou mande um SMS para <strong>8001</strong>
-      </p>
-    </li>
-    <li>
-      <h3>
-        <strong>Marcos</strong>
-      </h3>
-      <div class="avatar second-candidate selectable">
-        <div data-id="2"></div>
-      </div>
-      <p class="small">
-        Para eliminar a <strong>Marcos</strong> pelo telefone disque 
-        <strong>0800-123-002</strong> ou mande um SMS para <strong>8002</strong>
-      </p>
-    </li>
+    
+    <% candidates.each_with_index do |candidate, index| %>
+      <li>
+        <h3>
+          <strong><%= candidate.name %></strong>
+        </h3>
+        <div class="image candidate-<%= index %> selectable">
+          <div data-id="<%= candidate.id %>"></div>
+        </div>
+        <p class="small">
+          Para eliminar <strong><%= candidate.name %></strong> pelo telefone disque 
+          <strong><%= candidate.phone %></strong> ou mande um SMS para <strong><%= candidate.sms %></strong>
+        </p>
+      </li>
+    <% end %>
+
   </ul>
   <div id="vote">
     <input type="submit" class="btn btn-primary" value="Envie seu voto agora" />
   </div>
 </form>
-<script src="js/poll.js"></script>
+<script src="javascripts/poll.js"></script>

@@ -1,11 +1,15 @@
 todo:
+
 mvp:
-- timer *
-- redis storage
-- remove request specs
+- poll model
+- solution to flash => dont need flash
+- spec/models as integration test (?)
+- spec/requests
+- make sure selection was done
+- find a way to initialize data (route?)
 
 performant:
-- binary images
+- minified stuff
 - single page
 - vote via ajax
 - change the page via js/css

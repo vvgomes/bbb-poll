@@ -6,13 +6,13 @@
   </div>
 <% end %>
 
-<input type="hidden" id="first-candidate-votes" value="70" />
-<input type="hidden" id="second-candidate-votes" value="80" />
-<input type="hidden" id="deadline" value="1340051661000" />
+<input type="hidden" id="deadline" value="<%= deadline %>" />
 
 <div id="score">
-  <div class="avatar first-candidate"></div>
-  <div class="avatar second-candidate"></div>
+  <% candidates.each_with_index do |candidate, index| %>
+    <div class="image candidate-<%= index %>"></div>
+    <input type="hidden" id="candidate-<%= index %>-votes" value="<%= candidate.votes %>" />
+  <% end %>
 
   <canvas id="chart" width="270" height="270"></canvas>
 
@@ -24,4 +24,5 @@
     </div>
   </div>
 </div>
-<script src="js/score.js"></script>
+<script src="javascripts/chart.js"></script>
+<script src="javascripts/score.js"></script>

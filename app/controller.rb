@@ -9,22 +9,26 @@ configure do
 end
 
 get '/' do
-  redirect to '/poll'
+  #current = Poll.all.last
+  #erb :score if current.expired?
+  erb :poll, :locals => {
+    :candidates => Candidate.all
+  }
 end
 
-get '/poll' do
-  erb :poll
-end
-
-put '/poll' do
-  voted = params[:selected]
-  name = 'Silvia' if voted == '1'
-  name = 'Marcos' if voted == '2'
-
-  flash[:name] = name
+put '/' do
+  #ENQUE THIS PART=========
+  id = params[:selected_id]
+  voted = Candidate[id]
+  voted.incr :votes
+  #========================
+  flash[:name] = voted.name
   redirect to '/score'
 end
 
 get '/score' do
-  erb :score
+  erb :score, :locals => {
+    :candidates => Candidate.all,
+    :deadline => '1340229235000'
+  }
 end

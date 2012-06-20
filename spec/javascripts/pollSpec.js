@@ -1,7 +1,7 @@
-describe('candidate selector', function() {
-  it('should save the selected id in the dom', function() {
+describe('candidate avatar', function() {
+  it('should be selectable', function() {
     var dom = fakeDom();
-    createCandidateSelector(dom);
+    makeCandidateSelectable(dom);
     dom.avatars().trigger('click');
     expect(dom.selected().val()).toBe('99');
   });

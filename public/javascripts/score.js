@@ -1,6 +1,5 @@
-function createClock(milleseconds) {
+function createClock(deadline) {
   var clock = {};
-  var deadline = Math.floor(milleseconds / 1000);
   var left = deadline - (Date.parse(now()) / 1000);
 
   clock.toString = function() {

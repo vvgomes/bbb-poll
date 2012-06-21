@@ -8,7 +8,7 @@ describe('countdown', function() {
         d.setTime(1340027088000);
         return d;
       };
-      clock = createClock(1340030688000);
+      clock = createClock(1340030688);
     });
 
     it('should display time nicely', function() {
@@ -30,7 +30,7 @@ describe('countdown', function() {
     });
 
     it('should be expired when deadline is reached', function() {
-      clock = createClock(1340027088000);
+      clock = createClock(1340027088);
       clock.decrease();
       expect(clock.expired()).toBeTruthy();
     });

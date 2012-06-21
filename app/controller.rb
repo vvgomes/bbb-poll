@@ -1,4 +1,3 @@
-# encoding: utf-8
 require File.expand_path(File.dirname(__FILE__) + '/../config/environment')
 
 configure do
@@ -9,11 +8,11 @@ configure do
 end
 
 get '/' do
-  #current = Poll.all.last
-  #erb :score if current.expired?
-  erb :poll, :locals => {
-    :candidates => Candidate.all
-  }
+  current = Poll.current
+  redirect '/score' if current.expired?
+  erb :poll, :locals => { 
+    :candidates => current.candidates 
+  } 
 end
 
 put '/' do
@@ -27,8 +26,9 @@ put '/' do
 end
 
 get '/score' do
+  current = Poll.current
   erb :score, :locals => {
-    :candidates => Candidate.all,
-    :deadline => '1340229235000'
+    :candidates => current.candidates,
+    :deadline => current.deadline_in_seconds
   }
 end

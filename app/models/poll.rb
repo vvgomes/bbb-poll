@@ -1,6 +1,18 @@
 class Poll < Ohm::Model
   attribute :deadline
-  collection :candidates, :Candidate
+  set :candidates, :Candidate
+
+  def expired?
+    Time.parse(deadline) < Time.now
+  end
+
+  def deadline_in_seconds
+    Time.parse(deadline).to_i
+  end
+
+  def self.current
+    Poll.all.to_a.last
+  end
 end
 
 class Candidate < Ohm::Model

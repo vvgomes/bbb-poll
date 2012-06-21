@@ -1693,3 +1693,208 @@ I, [2012-06-20T17:49:49.066992 #76088]  INFO -- : reaped #<Process::Status: pid 
 I, [2012-06-20T17:49:49.067045 #76088]  INFO -- : reaped #<Process::Status: pid 76093 exit 0> worker=1
 I, [2012-06-20T17:49:49.067108 #76088]  INFO -- : reaped #<Process::Status: pid 76092 exit 0> worker=0
 I, [2012-06-20T17:49:49.067247 #76088]  INFO -- : master complete
+I, [2012-06-21T11:36:08.765307 #88477]  INFO -- : listening on addr=0.0.0.0:8080 fd=7
+I, [2012-06-21T11:36:08.769629 #88477]  INFO -- : worker=0 spawning...
+I, [2012-06-21T11:36:08.770732 #88477]  INFO -- : worker=1 spawning...
+I, [2012-06-21T11:36:08.771310 #88477]  INFO -- : worker=2 spawning...
+I, [2012-06-21T11:36:08.772110 #88477]  INFO -- : worker=3 spawning...
+I, [2012-06-21T11:36:08.772443 #88478]  INFO -- : worker=0 spawned pid=88478
+I, [2012-06-21T11:36:08.773388 #88478]  INFO -- : Refreshing Gem list
+I, [2012-06-21T11:36:08.773406 #88479]  INFO -- : worker=1 spawned pid=88479
+I, [2012-06-21T11:36:08.774147 #88479]  INFO -- : Refreshing Gem list
+I, [2012-06-21T11:36:08.774891 #88480]  INFO -- : worker=2 spawned pid=88480
+I, [2012-06-21T11:36:08.775313 #88477]  INFO -- : worker=4 spawning...
+I, [2012-06-21T11:36:08.775686 #88480]  INFO -- : Refreshing Gem list
+I, [2012-06-21T11:36:08.777488 #88477]  INFO -- : worker=5 spawning...
+I, [2012-06-21T11:36:08.778090 #88481]  INFO -- : worker=3 spawned pid=88481
+I, [2012-06-21T11:36:08.778741 #88481]  INFO -- : Refreshing Gem list
+I, [2012-06-21T11:36:08.779214 #88482]  INFO -- : worker=4 spawned pid=88482
+I, [2012-06-21T11:36:08.779647 #88477]  INFO -- : worker=6 spawning...
+I, [2012-06-21T11:36:08.779821 #88482]  INFO -- : Refreshing Gem list
+I, [2012-06-21T11:36:08.781344 #88483]  INFO -- : worker=5 spawned pid=88483
+I, [2012-06-21T11:36:08.781881 #88477]  INFO -- : worker=7 spawning...
+I, [2012-06-21T11:36:08.781981 #88483]  INFO -- : Refreshing Gem list
+I, [2012-06-21T11:36:08.782619 #88477]  INFO -- : master process ready
+I, [2012-06-21T11:36:08.783399 #88484]  INFO -- : worker=6 spawned pid=88484
+I, [2012-06-21T11:36:08.783827 #88484]  INFO -- : Refreshing Gem list
+I, [2012-06-21T11:36:08.783822 #88485]  INFO -- : worker=7 spawned pid=88485
+I, [2012-06-21T11:36:08.784298 #88485]  INFO -- : Refreshing Gem list
+I, [2012-06-21T11:36:09.431083 #88481]  INFO -- : worker=3 ready
+I, [2012-06-21T11:36:09.431246 #88479]  INFO -- : worker=1 ready
+I, [2012-06-21T11:36:09.432136 #88478]  INFO -- : worker=0 ready
+I, [2012-06-21T11:36:09.432506 #88480]  INFO -- : worker=2 ready
+I, [2012-06-21T11:36:09.432507 #88482]  INFO -- : worker=4 ready
+I, [2012-06-21T11:36:09.432669 #88484]  INFO -- : worker=6 ready
+I, [2012-06-21T11:36:09.432888 #88485]  INFO -- : worker=7 ready
+I, [2012-06-21T11:36:09.433388 #88483]  INFO -- : worker=5 ready
+ArgumentError - comparison of String with Time failed:
+	/Users/vgomes/codes/bbb-poll/app/models/poll.rb:6:in `<'
+	/Users/vgomes/codes/bbb-poll/app/models/poll.rb:6:in `expired?'
+	/Users/vgomes/codes/bbb-poll/app/controller.rb:12:in `block in <top (required)>'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1212:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1212:in `block in compile!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:785:in `[]'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:785:in `block (3 levels) in route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:801:in `route_eval'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:785:in `block (2 levels) in route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:822:in `block in process_route'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:820:in `catch'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:820:in `process_route'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:784:in `block in route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:783:in `each'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:783:in `route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:886:in `dispatch!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:719:in `block in call!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:871:in `block in invoke'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:871:in `catch'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:871:in `invoke'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:719:in `call!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:705:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/xss_header.rb:22:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/base.rb:47:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/base.rb:47:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/json_csrf.rb:17:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/base.rb:47:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/xss_header.rb:22:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/logger.rb:15:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/head.rb:9:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/showexceptions.rb:21:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1334:in `block in call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1416:in `synchronize'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1334:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lint.rb:48:in `_call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lint.rb:36:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/showexceptions.rb:24:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/commonlogger.rb:20:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/chunked.rb:43:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:531:in `process_client'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:606:in `worker_loop'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:487:in `spawn_missing_workers'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:137:in `start'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/bin/unicorn:121:in `<top (required)>'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/bin/unicorn:23:in `load'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/bin/unicorn:23:in `<main>'
+127.0.0.1 - - [21/Jun/2012 11:37:30] "GET / HTTP/1.1" 500 144604 0.9937
+ArgumentError - comparison of String with Time failed:
+	/Users/vgomes/codes/bbb-poll/app/models/poll.rb:6:in `<'
+	/Users/vgomes/codes/bbb-poll/app/models/poll.rb:6:in `expired?'
+	/Users/vgomes/codes/bbb-poll/app/controller.rb:12:in `block in <top (required)>'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1212:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1212:in `block in compile!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:785:in `[]'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:785:in `block (3 levels) in route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:801:in `route_eval'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:785:in `block (2 levels) in route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:822:in `block in process_route'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:820:in `catch'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:820:in `process_route'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:784:in `block in route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:783:in `each'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:783:in `route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:886:in `dispatch!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:719:in `block in call!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:871:in `block in invoke'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:871:in `catch'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:871:in `invoke'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:719:in `call!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:705:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/xss_header.rb:22:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/base.rb:47:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/base.rb:47:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/json_csrf.rb:17:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/base.rb:47:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/xss_header.rb:22:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/logger.rb:15:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/head.rb:9:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/showexceptions.rb:21:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1334:in `block in call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1416:in `synchronize'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1334:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lint.rb:48:in `_call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lint.rb:36:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/showexceptions.rb:24:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/commonlogger.rb:20:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/chunked.rb:43:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:531:in `process_client'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:606:in `worker_loop'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:487:in `spawn_missing_workers'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:137:in `start'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/bin/unicorn:121:in `<top (required)>'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/bin/unicorn:23:in `load'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/bin/unicorn:23:in `<main>'
+127.0.0.1 - - [21/Jun/2012 11:37:34] "GET / HTTP/1.1" 500 142882 0.0686
+127.0.0.1 - - [21/Jun/2012 11:37:34] "GET /__sinatra__/500.png HTTP/1.1" 200 31056 0.1028
+127.0.0.1 - - [21/Jun/2012 11:37:35] "GET /favicon.ico HTTP/1.1" 404 447 0.0340
+ArgumentError - comparison of String with Time failed:
+	/Users/vgomes/codes/bbb-poll/app/models/poll.rb:6:in `<'
+	/Users/vgomes/codes/bbb-poll/app/models/poll.rb:6:in `expired?'
+	/Users/vgomes/codes/bbb-poll/app/controller.rb:12:in `block in <top (required)>'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1212:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1212:in `block in compile!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:785:in `[]'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:785:in `block (3 levels) in route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:801:in `route_eval'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:785:in `block (2 levels) in route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:822:in `block in process_route'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:820:in `catch'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:820:in `process_route'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:784:in `block in route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:783:in `each'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:783:in `route!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:886:in `dispatch!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:719:in `block in call!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:871:in `block in invoke'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:871:in `catch'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:871:in `invoke'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:719:in `call!'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:705:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/xss_header.rb:22:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/base.rb:47:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/base.rb:47:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/path_traversal.rb:16:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/json_csrf.rb:17:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/base.rb:47:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-protection-1.2.0/lib/rack/protection/xss_header.rb:22:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:205:in `context'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/session/abstract/id.rb:200:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/logger.rb:15:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/head.rb:9:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/methodoverride.rb:21:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/showexceptions.rb:21:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1334:in `block in call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1416:in `synchronize'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/sinatra-1.3.2/lib/sinatra/base.rb:1334:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lint.rb:48:in `_call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/lint.rb:36:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/showexceptions.rb:24:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/commonlogger.rb:20:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/chunked.rb:43:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/rack-1.4.1/lib/rack/content_length.rb:14:in `call'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:531:in `process_client'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:606:in `worker_loop'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:487:in `spawn_missing_workers'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/lib/unicorn/http_server.rb:137:in `start'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/gems/unicorn-4.3.1/bin/unicorn:121:in `<top (required)>'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/bin/unicorn:23:in `load'
+	/Users/vgomes/.rvm/gems/ruby-1.9.3-p194/bin/unicorn:23:in `<main>'
+127.0.0.1 - - [21/Jun/2012 11:44:43] "GET / HTTP/1.1" 500 142882 0.0954
+127.0.0.1 - - [21/Jun/2012 11:44:43] "GET /favicon.ico HTTP/1.1" 404 447 0.0359
+I, [2012-06-21T11:45:42.342592 #88477]  INFO -- : reaped #<Process::Status: pid 88485 exit 0> worker=7
+I, [2012-06-21T11:45:42.342692 #88477]  INFO -- : reaped #<Process::Status: pid 88484 exit 0> worker=6
+I, [2012-06-21T11:45:42.343024 #88477]  INFO -- : reaped #<Process::Status: pid 88483 exit 0> worker=5
+I, [2012-06-21T11:45:42.343062 #88477]  INFO -- : reaped #<Process::Status: pid 88482 exit 0> worker=4
+I, [2012-06-21T11:45:42.343108 #88477]  INFO -- : reaped #<Process::Status: pid 88481 exit 0> worker=3
+I, [2012-06-21T11:45:42.343148 #88477]  INFO -- : reaped #<Process::Status: pid 88480 exit 0> worker=2
+I, [2012-06-21T11:45:42.343188 #88477]  INFO -- : reaped #<Process::Status: pid 88479 exit 0> worker=1
+I, [2012-06-21T11:45:42.343222 #88477]  INFO -- : reaped #<Process::Status: pid 88478 exit 0> worker=0
+I, [2012-06-21T11:45:42.343344 #88477]  INFO -- : master complete

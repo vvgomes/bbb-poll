@@ -1,11 +1,10 @@
 todo:
 
 mvp:
-- poll model
-- solution to flash => dont need flash
-- spec/models as integration test (?)
-- spec/requests
 - make sure selection was done
+- dont need flash
+- spec/models
+- spec/requests
 
 performant:
 - minified stuff

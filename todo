@@ -1,7 +1,6 @@
 todo:
 
 mvp:
-- make sure selection was done
 - dont need flash
 - spec/models
 - spec/requests

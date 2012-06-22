@@ -1,14 +1,17 @@
 todo:
 
+- increase # of workers
+
 mvp:
 - dont need flash
-- spec/models
-- spec/requests
 
 performant:
-- minified stuff
 - single page
 - vote via ajax
 - change the page via js/css
+
 - serve pure html
 - assets
+- minified stuff
+
+- spec/requests

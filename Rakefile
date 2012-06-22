@@ -33,3 +33,6 @@ db = namespace :db do
     ruby './db/seeds.rb'
   end
 end
+
+require './app/controller'
+require 'resque/tasks'

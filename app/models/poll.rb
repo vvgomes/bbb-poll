@@ -21,3 +21,11 @@ class Candidate < Ohm::Model
   attribute :sms
   counter :votes
 end
+
+class VoteJob
+  @queue = :votes
+
+  def self.perform id
+    Candidate[id].incr :votes
+  end
+end

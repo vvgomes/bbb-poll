@@ -16,12 +16,7 @@ get '/' do
 end
 
 put '/' do
-  #ENQUE THIS PART=========
-  id = params[:selected_id]
-  voted = Candidate[id]
-  voted.incr :votes
-  #========================
-  flash[:name] = voted.name
+  Resque.enqueue(VoteJob, params[:selected_id])
   redirect to '/score'
 end
 

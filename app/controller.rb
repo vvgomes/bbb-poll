@@ -17,6 +17,7 @@ end
 
 put '/' do
   Resque.enqueue(VoteJob, params[:selected_id])
+  flash[:name] = params[:selected_name]
   redirect to '/score'
 end
 

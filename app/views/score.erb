@@ -5,17 +5,13 @@
     </p>
   </div>
 <% end %>
-
 <input type="hidden" id="deadline" value="<%= deadline %>" />
-
 <div id="score">
   <% candidates.each_with_index do |candidate, index| %>
     <div class="image candidate-<%= index %>"></div>
     <input type="hidden" id="candidate-<%= index %>-votes" value="<%= candidate.votes %>" />
   <% end %>
-
   <canvas id="chart" width="270" height="270"></canvas>
-
   <div id="countdown">
     <div id="countdown-wrapper">
       <p>FALTAM</p>
@@ -24,5 +20,4 @@
     </div>
   </div>
 </div>
-<script src="javascripts/chart.js"></script>
-<script src="javascripts/score.js"></script>
+<script src="js/score.js"></script>

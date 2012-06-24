@@ -11,7 +11,12 @@ class Poll < Ohm::Model
   end
 
   def self.current
-    Poll.all.to_a.last
+    begin
+      return @@current
+    rescue
+      @@current = Poll.all.to_a.last
+      current
+    end  
   end
 end
 

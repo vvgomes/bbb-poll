@@ -2,7 +2,6 @@
   <input type="hidden" name="_method" value="put" />
   <input type="hidden" name="selected_id" value="" />
   <ul id="candidates">
-    
     <% candidates.each_with_index do |candidate, index| %>
       <li>
         <h3>
@@ -17,10 +16,9 @@
         </p>
       </li>
     <% end %>
-
   </ul>
   <div id="vote">
     <input type="submit" class="btn btn-primary" value="Escolha um candidato" disabled />
   </div>
 </form>
-<script src="javascripts/poll.js"></script>
+<script src="js/poll.js"></script>

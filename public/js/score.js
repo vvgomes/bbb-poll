@@ -179,14 +179,17 @@ function startCountdown(clock, dom) {
   }
 
   function stop() {
-    dom.wrapper().html('<p id="expired">VOTAÇÃO ENCERRADA</p>');
+    //dom.wrapper().html('<p id="expired">VOTA&Ccedil;&Atilde;O ENCERRADA</p>');
+    dom.message().hide();
+    dom.expired().show();
     clearInterval(loop);
   }
 }
 
 var countdownDom = {
   clock: function() { return $('#clock'); },
-  wrapper: function() { return $('#countdown-wrapper'); },
+  message: function() { return $('#countdown-wrapper p'); },
+  expired: function() { return $('#expired'); },
   deadline: function() { return $('#deadline'); }
 };
 

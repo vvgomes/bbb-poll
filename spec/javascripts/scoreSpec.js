@@ -51,16 +51,18 @@ describe('countdown', function() {
 
     it('should stop the clock when deadline is reached', function() {
       startCountdown(fakeClock(true), dom);
-      expect(dom.wrapper().html()).toBe('<p id="expired">VOTAÇÃO ENCERRADA</p>')
+      expect(dom.message().attr('hidden')).toBeFalsy();
     });
 
     function fakeDom() {
       var clockUI = $('<p></p>');
-      var wrapper = $('<div></div>');
+      var message = $('<div><p></p></div>');
+      var expired = $('<p hidden></p>');
       var deadline = $('<input value="123"/>');
       return {
         clock: function() { return clockUI; },
-        wrapper: function() { return wrapper; },
+        message: function() { return message; },
+        expired: function() { return expired; },
         deadline: function() { return deadline; }
       };
     }

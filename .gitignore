@@ -1,2 +1,3 @@
 .Gemfile
 *.DS_Store
+log/*.log

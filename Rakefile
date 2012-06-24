@@ -34,5 +34,18 @@ db = namespace :db do
   end
 end
 
+task :compress do
+  compressor = YUI::CssCompressor.new
+  styles = compressor.compress(File.open('./public/css/styles.css').read)
+  File.new('./public/css/styles.min.css', 'w').write styles
+
+  compressor = YUI::JavaScriptCompressor.new(:munge => true)
+  poll = compressor.compress(File.open('./public/js/poll.js').read)
+  score = compressor.compress(File.open('./public/js/score.js').read)
+  File.new('./public/js/min/poll.min.js', 'w').write poll
+  File.new('./public/js/min/score.min.js', 'w').write score
+  puts 'Done.'
+end
+
 require './app/controller'
 require 'resque/tasks'

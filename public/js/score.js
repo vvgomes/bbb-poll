@@ -179,7 +179,6 @@ function startCountdown(clock, dom) {
   }
 
   function stop() {
-    //dom.wrapper().html('<p id="expired">VOTA&Ccedil;&Atilde;O ENCERRADA</p>');
     dom.message().hide();
     dom.expired().show();
     clearInterval(loop);

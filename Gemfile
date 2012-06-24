@@ -6,7 +6,7 @@ gem 'unicorn'
 gem 'ohm'
 gem 'resque'
 gem 'sinatra-flash', :require => 'sinatra/flash'
-#gem 'yui-compressor', :require => 'yui/compressor'
+gem 'yui-compressor', :require => 'yui/compressor'
 
 group :test do
   gem 'rspec'

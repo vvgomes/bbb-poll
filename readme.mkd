@@ -1,1 +1,13 @@
 bbb-poll
+====
+Setup & Run
+--------------
+`$ git clone https://github.com/vvgomes/bbb-poll.git`
+
+`$ cd bbb-poll`
+
+`sh ./configure`
+
+`make`
+
+Now, point your browser to http://localhost:8080/ and check it out ;)

@@ -5,14 +5,15 @@ configure do
   set :app_file, __FILE__
   set :views, File.dirname(__FILE__)+'/views'
   set :public_folder, File.dirname(__FILE__)+'/../public'
+
+  @@cache = {}
 end
 
 get '/' do
   current = Poll.current
   redirect '/score' if current.expired?
-  erb :poll, :locals => { 
-    :candidates => current.candidates 
-  } 
+  @@cache[:poll] = erb(:poll, :locals => { :candidates => current.candidates }) unless @@cache[:poll]
+  @@cache[:poll]
 end
 
 put '/' do

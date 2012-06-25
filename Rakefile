@@ -30,11 +30,14 @@ end
 
 db = namespace :db do
   task :seed do
+    puts 'Data setup...'
     ruby './db/seeds.rb'
+    puts 'Done.'
   end
 end
 
 task :compress do
+  puts 'Compressing assets...'
   compressor = YUI::CssCompressor.new
   styles = compressor.compress(File.open('./public/css/styles.css').read)
   File.new('./public/css/styles.min.css', 'w').write styles

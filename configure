@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "Installing bbb-poll dependencies..."
+
+#gem install --no-rdoc --no-ri bundler
+#bundle install
+
+#redis
+curl http://redis.googlecode.com/files/redis-2.4.15.tar.gz > redis.tar.gz
+tar xzf redis.tar.gz
+cd redis-2.4.15
+make
+
+echo "Done."

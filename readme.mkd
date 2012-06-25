@@ -6,8 +6,8 @@ Setup & Run
 
 `$ cd bbb-poll`
 
-`sh ./configure`
+`$ sh ./configure`
 
-`make`
+`$ make`
 
 Now, point your browser to http://localhost:8080/ and check it out ;)

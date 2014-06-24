@@ -140,11 +140,9 @@ function createClock(deadline) {
     var min = Math.floor((left - (hours * 3600)) / 60);
     var sec = Math.floor((left - (hours * 3600) - (min * 60)));
 
-    hours = (hours < 10) ? ('0' + hours) : hours.toString();
-    min = (min < 10) ? ('0' + min) : min.toString();
-    sec = (sec < 10) ? ('0' + sec) : sec.toString();
-    
-    return hours + ':' + min + ':' + sec;
+    return $([hours, min, sec]).map(function(i, e) {
+      return String('0' + e).slice(-2);
+    }).join(':');
   };
 
   clock.decrease = function() {
